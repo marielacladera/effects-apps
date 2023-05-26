@@ -1,0 +1,14 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col" *ngFor="let user of users">
+    <div class="card h-100" >
+      <img [src]="user.getAvatar()" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{user.getFirstName()}} {{user.getLastName()}}</h5>
+        <p class="card-text">Email: {{user.getEmail()}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">ID: {{user.getId()}}</small>
+      </div>
+    </div>
+  </div>
+</div>

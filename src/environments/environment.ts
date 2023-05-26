@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  HOST: 'https://reqres.in/api'  //https://reqres.in/api/users?per_page=6
 };
 
 /*
