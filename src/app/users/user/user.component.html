@@ -1,1 +1,31 @@
-<p>user works!</p>
+<div class="alert alert-info text-center" role="alert" *ngIf="loading">
+  <h4 class="alert-heading">Cargando...</h4>
+  <p>
+    <fa-icon [icon]="faSpinner" [spin]="true" size="2x" ></fa-icon>
+  </p>
+  <p class="mb-0"></p>
+</div>
+
+<div class="alert alert-danger text-center" role="alert" *ngIf="error">
+  <h4 class="alert-heading">Error...</h4>
+  <pre>
+    {{error | json}}
+  </pre>
+  <p class="mb-0"></p>
+</div>
+
+<div class="row" *ngIf="user">
+
+  <div class="col-4">
+    <img [src]="user.getAvatar()" alt="avatar" class="img-thumbnail">
+  </div>
+
+  <div class="col">
+    <ul class="list-group">
+      <li class="list-group-item"><b>FirstName: </b>{{user.getFirstName()}}</li>
+      <li class="list-group-item"><b>LastName: </b>{{user.getFirstName()}}</li>
+      <li class="list-group-item"><b>Email: </b>{{user.getEmail()}}</li>
+      <li class="list-group-item"><b>Id: </b>{{user.getId()}}</li>
+    </ul>
+  </div>
+</div>
