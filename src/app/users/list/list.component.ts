@@ -41,19 +41,4 @@ export class ListComponent implements OnInit {
     this._store.dispatch(loadUsers());
   }
 
-
-  /*private _initialize(): void {
-    this._listUsers();
-  }
-
-  private _listUsers(): void {
-    this._listUserService.listUsers().subscribe( users => {
-      this._loadDataOfUsers(users);
-    });
-  }
-
-  private _loadDataOfUsers(users: any): void {
-    this.users = users.map((user:any) => User.createUser(user))
-  }*/
-
 }
